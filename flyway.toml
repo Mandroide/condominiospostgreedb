@@ -28,3 +28,7 @@ ignoreNewlinesInTextObjects = "off"
 [environments.target1]
 url = "jdbc:postgresql://condominiospostgreedb-michaelrafaelventura01-8be6.l.aivencloud.com:13195/condomDB?ssl=require"
 schemas = [ "public" ]
+
+[environments.localhost]
+url = "jdbc:postgresql://localhost:5432/condomDB"
+schemas = [ "condominio" ]
