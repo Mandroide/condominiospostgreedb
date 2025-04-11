@@ -1,0 +1,30 @@
+databaseType = "PostgreSql"
+id = "04c2e6e3-b895-45cc-bd7c-575e873966de"
+name = "condominiospostgreedb"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.behavior]
+detectRenames = "identical-only"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments.target1]
+url = "jdbc:postgresql://condominiospostgreedb-michaelrafaelventura01-8be6.l.aivencloud.com:13195/condomDB?ssl=require"
+schemas = [ "public" ]
